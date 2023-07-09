@@ -21,10 +21,6 @@ for (let i = 0; i < CPU_COUNT; i++) {
     worker.on("error", (error) => {
       reject(error);
     });
-
-    worker.on("initiated", (message) => {
-      console.log(message);
-    });
   });
 
   workerPromises.push(promise);
